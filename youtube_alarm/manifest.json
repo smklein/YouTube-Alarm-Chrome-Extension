@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "YouTube Alarm Clock",
+  "description": "Opens a YouTube video in a new tab at the specified time",
+  "version": "0.0.0.1",
+
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "tabs",
+    "background"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

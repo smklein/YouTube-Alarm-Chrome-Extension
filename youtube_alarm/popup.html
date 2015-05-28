@@ -1,0 +1,50 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style type="text/css">
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #submitButton {
+          display:inline-block;
+          margin-right: 10px;
+      }
+      #resultText {
+          display: inline-block;
+          color: #FFFFFF;
+          -o-transition: color 0.60s linear;
+          -moz-transition: color 0.60s linear;
+          -khtml-transition: color 0.60s linear;
+          -webkit-transition: color 0.60s linear;
+          -ms-transition: color 0.60s linear;
+          transition: color 0.60s linear;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h4> YouTube Alarm Clock </h4>
+    <form id="alarmForm" action="">
+        URL: <input type="text" name="url" size="80"><br>
+        Time: <input type="time" name="time"><br>
+        Set Start Time to Zero: <input type="checkbox" name="zeroTime"><br>
+        <input id="submitButton" type="submit" value="Set Alarm">
+        <h3 id="resultText"></h3>
+    </form>
+  </body>
+</html>
+
